@@ -1,11 +1,8 @@
 /* ============================================================
    SISMED Reports — Hoja de estilos principal
-   Diseño equilibrado, responsive y consistente
    ============================================================ */
 
-/* ---------- 1. VARIABLES GLOBALES ---------- */
 :root {
-  /* Colores */
   --azul-900: #071f31;
   --azul-800: #0a2e47;
   --azul-700: #0b3c5d;
@@ -25,27 +22,16 @@
   --texto: #0b3c5d;
   --texto-suave: #456178;
 
-  /* Espaciado */
-  --space-xs: 0.5rem;
-  --space-sm: 1rem;
-  --space-md: 1.5rem;
-  --space-lg: 2.5rem;
-  --space-xl: 4rem;
-  --space-2xl: 5.5rem;
-
-  /* Contenedor */
   --container: 1180px;
   --radius-sm: 10px;
   --radius: 16px;
   --radius-lg: 22px;
 
-  /* Sombras */
   --shadow-sm: 0 4px 12px rgba(11, 60, 93, 0.06);
   --shadow: 0 12px 30px rgba(11, 60, 93, 0.08);
   --shadow-lg: 0 24px 50px rgba(11, 60, 93, 0.12);
 }
 
-/* ---------- 2. RESET Y BASE ---------- */
 *,
 *::before,
 *::after {
@@ -89,7 +75,6 @@ h4 {
   margin: 0;
 }
 
-/* ---------- 3. CONTENEDOR ---------- */
 .container {
   margin: 0 auto;
   max-width: var(--container);
@@ -97,7 +82,6 @@ h4 {
   width: 100%;
 }
 
-/* ---------- 4. SECCIONES ---------- */
 section {
   padding: clamp(3rem, 6vw, 5.5rem) 0;
 }
@@ -105,7 +89,6 @@ section.alt {
   background: var(--gris-50);
 }
 
-/* ---------- 5. TÍTULOS DE SECCIÓN ---------- */
 .section-title {
   margin: 0 auto clamp(2rem, 4vw, 3.5rem);
   max-width: 780px;
@@ -122,7 +105,7 @@ section.alt {
   line-height: 1.6;
 }
 
-/* ---------- 6. HEADER ---------- */
+/* HEADER */
 .header {
   backdrop-filter: blur(10px);
   background: rgba(255, 255, 255, 0.92);
@@ -137,6 +120,12 @@ section.alt {
   gap: 1rem;
   justify-content: space-between;
   padding: 14px 0;
+}
+.header-actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 .logo {
   align-items: center;
@@ -161,14 +150,8 @@ section.alt {
   justify-content: center;
   width: 42px;
 }
-.header-actions {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
 
-/* ---------- 7. BOTONES ---------- */
+/* BOTONES */
 .btn-wa {
   align-items: center;
   background: var(--verde-500);
@@ -215,7 +198,7 @@ section.alt {
   align-items: center;
   background: var(--azul-600);
   border-radius: 50px;
-  box-shadow: 0 8px 20px rgba(29, 111, 165, 0.25);
+  box-shadow: 0 8px 20px rgba(29, 111, 165, 0.3);
   color: #fff;
   display: inline-flex;
   font-size: 0.95rem;
@@ -228,7 +211,7 @@ section.alt {
   white-space: nowrap;
 }
 .btn-mail:hover {
-  box-shadow: 0 12px 26px rgba(29, 111, 165, 0.35);
+  box-shadow: 0 12px 26px rgba(29, 111, 165, 0.42);
   transform: translateY(-2px);
 }
 .btn-mail svg {
@@ -264,7 +247,7 @@ section.alt {
   color: #fff;
 }
 
-/* ---------- 8. HERO ---------- */
+/* HERO */
 .hero {
   background:
     radial-gradient(circle at 90% 10%, rgba(14, 159, 110, 0.1), transparent 45%), radial-gradient(circle at 10% 90%, rgba(29, 111, 165, 0.12), transparent 45%),
@@ -330,7 +313,6 @@ section.alt {
   width: 18px;
 }
 
-/* ---------- 9. BADGE COMO ENLACE (Circular 021) ---------- */
 .badge-link {
   align-items: center;
   display: inline-flex;
@@ -351,7 +333,7 @@ section.alt {
   opacity: 0.85;
 }
 
-/* ---------- 10. GRIDS DE TARJETAS ---------- */
+/* GRIDS */
 .grid-3,
 .grid-4 {
   display: grid;
@@ -364,7 +346,7 @@ section.alt {
   grid-template-columns: repeat(4, 1fr);
 }
 
-/* ---------- 11. CARDS ---------- */
+/* CARDS */
 .card {
   background: #fff;
   border: 1px solid var(--gris-200);
@@ -421,7 +403,7 @@ section.alt {
   color: var(--rojo);
 }
 
-/* ---------- 12. PANELES PROBLEMA / SOLUCIÓN ---------- */
+/* PANELES */
 .two-col {
   align-items: stretch;
   display: grid;
@@ -462,7 +444,6 @@ section.alt {
 .panel ul li strong {
   color: var(--texto);
 }
-
 .panel-problema {
   background: #fff7f7;
   border: 1px solid #f3d9d9;
@@ -473,7 +454,6 @@ section.alt {
 .panel-problema ul li::before {
   background: var(--rojo);
 }
-
 .panel-solucion {
   background: #f1fbf6;
   border: 1px solid #c9ebd9;
@@ -485,7 +465,7 @@ section.alt {
   background: var(--verde-600);
 }
 
-/* ---------- 13. HIGHLIGHT (diferenciador) ---------- */
+/* HIGHLIGHT */
 .highlight {
   background: linear-gradient(135deg, var(--azul-900), var(--azul-800));
   border-radius: var(--radius-lg);
@@ -537,7 +517,7 @@ section.alt {
   margin: 0;
 }
 
-/* ---------- 14. JUSTIFICACIÓN DE PRECIOS ---------- */
+/* JUSTIFICACIÓN */
 .justificacion-precios {
   background: linear-gradient(135deg, #f7fafd 0%, #eef4fa 100%);
   border: 1px solid var(--gris-200);
@@ -622,7 +602,7 @@ section.alt {
   text-align: center;
 }
 
-/* ---------- 15. PLANES ---------- */
+/* PLANES */
 .planes {
   align-items: stretch;
   display: grid;
@@ -671,6 +651,13 @@ section.alt {
 .plan .volumen {
   color: var(--texto-suave);
   font-size: 0.9rem;
+  margin-bottom: 4px;
+}
+.plan .proveedores {
+  color: var(--verde-600);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
   margin-bottom: 18px;
 }
 .plan .precio {
@@ -718,7 +705,7 @@ section.alt {
   margin-top: auto;
 }
 
-/* ---------- 16. CTA INTERMEDIO ---------- */
+/* CTA INTERMEDIO */
 .cta-intermedio {
   align-items: center;
   background: linear-gradient(135deg, var(--azul-900), var(--azul-800));
@@ -741,7 +728,7 @@ section.alt {
   color: var(--verde-300);
 }
 
-/* ---------- 17. TABLA DE VOLÚMENES ---------- */
+/* TABLA */
 .tabla-wrap {
   background: #fff;
   border: 1px solid var(--gris-200);
@@ -786,7 +773,7 @@ section.alt {
   max-width: 900px;
 }
 
-/* ---------- 18. CTA FINAL ---------- */
+/* CTA FINAL */
 .cta-final {
   background: linear-gradient(135deg, var(--azul-900), var(--azul-700));
   color: #fff;
@@ -824,8 +811,10 @@ section.alt {
 }
 .cta-final-mail {
   color: rgba(255, 255, 255, 0.8);
-  font-size: 0.9rem;
-  margin: 1.5rem auto 0;
+  font-size: 0.95rem;
+  margin: 1.6rem auto 0 !important;
+  max-width: none !important;
+  text-align: center;
 }
 .cta-final-mail a {
   color: var(--verde-300);
@@ -836,7 +825,7 @@ section.alt {
   text-decoration: underline;
 }
 
-/* ---------- 19. FOOTER ---------- */
+/* FOOTER */
 .footer {
   background: var(--azul-900);
   color: rgba(255, 255, 255, 0.75);
@@ -852,36 +841,32 @@ section.alt {
 .footer .logo {
   color: #fff;
 }
-.footer-contacto {
-  align-items: center;
-  color: rgba(255, 255, 255, 0.6);
-  display: flex;
-  flex-wrap: wrap;
-  font-size: 0.88rem;
-  gap: 8px;
-}
-.footer-contacto a {
-  color: rgba(255, 255, 255, 0.75);
-  text-decoration: none;
-}
-.footer-contacto a:hover {
-  color: #fff;
-  text-decoration: underline;
-}
-.footer-sep {
-  opacity: 0.5;
-}
 .footer p {
   color: rgba(255, 255, 255, 0.6);
   font-size: 0.88rem;
   margin: 0;
 }
-.footer .btn-wa-sm,
-.footer .btn-mail-sm {
+.footer-contacto {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.88rem;
+}
+.footer-contacto a {
+  color: var(--verde-300);
+  font-weight: 600;
+  text-decoration: none;
+}
+.footer-contacto a:hover {
+  text-decoration: underline;
+}
+.footer-sep {
+  margin: 0 6px;
+  opacity: 0.6;
+}
+.footer .btn-wa-sm {
   flex-shrink: 0;
 }
 
-/* ---------- 20. BOTÓN FLOTANTE WHATSAPP ---------- */
+/* FLOAT WA */
 .wa-float {
   align-items: center;
   background: var(--verde-500);
@@ -909,7 +894,7 @@ section.alt {
   width: 30px;
 }
 
-/* ---------- 21. RESPONSIVE ---------- */
+/* RESPONSIVE */
 @media (max-width: 1024px) {
   .grid-4 {
     grid-template-columns: repeat(2, 1fr);
@@ -921,7 +906,6 @@ section.alt {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
 @media (max-width: 900px) {
   .grid-3 {
     grid-template-columns: repeat(2, 1fr);
@@ -933,7 +917,6 @@ section.alt {
     grid-template-columns: 1fr;
   }
 }
-
 @media (max-width: 640px) {
   .grid-3,
   .grid-4 {
@@ -947,6 +930,14 @@ section.alt {
   }
   .header-inner {
     padding: 12px 0;
+  }
+  .header-actions {
+    gap: 6px;
+  }
+  .header-actions .btn-mail-sm,
+  .header-actions .btn-wa-sm {
+    font-size: 0.78rem;
+    padding: 8px 12px;
   }
   .logo {
     font-size: 1rem;
@@ -979,9 +970,6 @@ section.alt {
   .footer-inner {
     flex-direction: column;
     text-align: center;
-  }
-  .footer-contacto {
-    justify-content: center;
   }
   .wa-float {
     bottom: 18px;

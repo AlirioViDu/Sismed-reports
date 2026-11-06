@@ -5,17 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flyer SISMED Reports — SISMED y SISDIS</title>
     <style>
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
+      * { box-sizing: border-box; margin: 0; padding: 0; }
       body {
-        font-family:
-          "Segoe UI",
-          system-ui,
-          -apple-system,
-          sans-serif;
+        font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
         background: #e9eef3;
         display: flex;
         align-items: center;
@@ -23,15 +15,14 @@
         min-height: 100vh;
         padding: 24px;
       }
-
-      /* ===== FLYER ===== */
       .flyer {
         width: 1080px;
         max-width: 100%;
         aspect-ratio: 4/5;
         background:
           radial-gradient(circle at 90% 8%, rgba(14, 159, 110, 0.2), transparent 45%),
-          radial-gradient(circle at 5% 95%, rgba(29, 111, 165, 0.26), transparent 45%), linear-gradient(160deg, #0b3c5d 0%, #0a2e47 55%, #071f31 100%);
+          radial-gradient(circle at 5% 95%, rgba(29, 111, 165, 0.26), transparent 45%),
+          linear-gradient(160deg, #0b3c5d 0%, #0a2e47 55%, #071f31 100%);
         color: #fff;
         border-radius: 24px;
         padding: 48px 46px;
@@ -61,12 +52,8 @@
         border-radius: 50%;
         background: radial-gradient(circle, rgba(29, 111, 165, 0.32), transparent 70%);
       }
-      .flyer > * {
-        position: relative;
-        z-index: 2;
-      }
+      .flyer > * { position: relative; z-index: 2; }
 
-      /* ===== TOP: LOGO + BADGE + CORREO ===== */
       .f-top {
         display: flex;
         align-items: center;
@@ -83,9 +70,7 @@
         font-size: 1.15rem;
         color: #fff;
       }
-      .f-logo span {
-        color: #0e9f6e;
-      }
+      .f-logo span { color: #0e9f6e; }
       .f-logo-mark {
         width: 42px;
         height: 42px;
@@ -99,17 +84,8 @@
         font-size: 1rem;
         flex-shrink: 0;
       }
-      .f-top-actions {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        flex-wrap: wrap;
-      }
+      .f-top-actions { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
 
-<<<<<<< HEAD
-=======
-      /* Badge CIRCULAR 021 como enlace */
->>>>>>> 58b87accdee9f80559c5d5a8a3fb16de0d9ad6e4
       .f-badge {
         display: inline-flex;
         align-items: center;
@@ -123,20 +99,14 @@
         border-radius: 50px;
         letter-spacing: 0.5px;
         text-decoration: none;
-        transition:
-          background 0.18s ease,
-          border-color 0.18s ease,
-          transform 0.18s ease;
+        transition: background 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
       }
       .f-badge:hover {
         background: rgba(14, 159, 110, 0.28);
         border-color: rgba(14, 159, 110, 0.65);
         transform: translateY(-1px);
       }
-      .f-badge svg {
-        flex-shrink: 0;
-        opacity: 0.85;
-      }
+      .f-badge svg { flex-shrink: 0; opacity: 0.85; }
 
       .f-mail {
         display: inline-flex;
@@ -150,22 +120,15 @@
         padding: 8px 14px;
         border-radius: 50px;
         text-decoration: none;
-        transition:
-          background 0.18s ease,
-          border-color 0.18s ease,
-          transform 0.18s ease;
+        transition: background 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
       }
       .f-mail:hover {
         background: rgba(255, 255, 255, 0.16);
         border-color: rgba(255, 255, 255, 0.4);
         transform: translateY(-1px);
       }
-      .f-mail svg {
-        flex-shrink: 0;
-        opacity: 0.9;
-      }
+      .f-mail svg { flex-shrink: 0; opacity: 0.9; }
 
-      /* ===== TÍTULO Y SUBTÍTULO ===== */
       .f-title {
         font-size: 2.7rem;
         line-height: 1.08;
@@ -174,10 +137,7 @@
         margin-bottom: 14px;
         color: #fff;
       }
-      .f-title em {
-        font-style: normal;
-        color: #0e9f6e;
-      }
+      .f-title em { font-style: normal; color: #0e9f6e; }
       .f-sub {
         font-size: 1rem;
         color: rgba(255, 255, 255, 0.82);
@@ -186,13 +146,7 @@
         line-height: 1.55;
       }
 
-      /* ===== PILLS ===== */
-      .f-pills {
-        display: flex;
-        gap: 9px;
-        flex-wrap: wrap;
-        margin-bottom: 26px;
-      }
+      .f-pills { display: flex; gap: 9px; flex-wrap: wrap; margin-bottom: 26px; }
       .f-pill {
         background: rgba(255, 255, 255, 0.08);
         border: 1px solid rgba(255, 255, 255, 0.18);
@@ -204,13 +158,8 @@
         align-items: center;
         gap: 6px;
       }
-      .f-pill::before {
-        content: "✓";
-        color: #0e9f6e;
-        font-weight: 900;
-      }
+      .f-pill::before { content: "✓"; color: #0e9f6e; font-weight: 900; }
 
-      /* ===== TARJETAS DE PLAN ===== */
       .f-planes {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -229,17 +178,9 @@
         background: rgba(14, 159, 110, 0.16);
         border-color: rgba(14, 159, 110, 0.55);
       }
-      .f-plan h5 {
-        font-size: 0.9rem;
-        font-weight: 800;
-        margin-bottom: 4px;
-        color: #fff;
-      }
-      .f-plan .v {
-        font-size: 0.7rem;
-        color: rgba(255, 255, 255, 0.65);
-        margin-bottom: 12px;
-      }
+      .f-plan h5 { font-size: 0.9rem; font-weight: 800; margin-bottom: 4px; color: #fff; }
+      .f-plan .v { font-size: 0.7rem; color: rgba(255, 255, 255, 0.65); margin-bottom: 2px; }
+      .f-plan .prov { font-size: 0.68rem; color: #7fe3b8; font-weight: 700; margin-bottom: 12px; }
       .f-plan .p {
         font-size: 1.15rem;
         font-weight: 800;
@@ -274,20 +215,14 @@
         border-radius: 50px;
         text-decoration: none;
         box-shadow: 0 6px 14px rgba(37, 211, 102, 0.35);
-        transition:
-          transform 0.18s ease,
-          box-shadow 0.18s ease;
+        transition: transform 0.18s ease, box-shadow 0.18s ease;
       }
       .f-plan .f-btn-mini:hover {
         transform: translateY(-1px);
         box-shadow: 0 8px 18px rgba(37, 211, 102, 0.45);
       }
-      .f-plan .f-btn-mini svg {
-        width: 12px;
-        height: 12px;
-      }
+      .f-plan .f-btn-mini svg { width: 12px; height: 12px; }
 
-      /* ===== JUSTIFICACIÓN COMPACTA ===== */
       .f-justif {
         background: rgba(255, 255, 255, 0.05);
         border: 1px solid rgba(255, 255, 255, 0.12);
@@ -304,12 +239,7 @@
         letter-spacing: 0.5px;
         margin-bottom: 10px;
       }
-      .f-justif-list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px 18px;
-        list-style: none;
-      }
+      .f-justif-list { display: flex; flex-wrap: wrap; gap: 8px 18px; list-style: none; }
       .f-justif-list li {
         display: flex;
         align-items: center;
@@ -318,14 +248,8 @@
         color: rgba(255, 255, 255, 0.88);
         font-weight: 600;
       }
-      .f-justif-list li::before {
-        content: "✓";
-        color: #0e9f6e;
-        font-weight: 900;
-        font-size: 0.85rem;
-      }
+      .f-justif-list li::before { content: "✓"; color: #0e9f6e; font-weight: 900; font-size: 0.85rem; }
 
-      /* ===== CTA FINAL ===== */
       .f-cta {
         margin-top: auto;
         display: flex;
@@ -338,11 +262,7 @@
         border-radius: 16px;
         padding: 18px 22px;
       }
-      .f-cta-text {
-        font-size: 0.9rem;
-        font-weight: 700;
-        color: #fff;
-      }
+      .f-cta-text { font-size: 0.9rem; font-weight: 700; color: #fff; }
       .f-cta-text small {
         display: block;
         font-weight: 500;
@@ -356,14 +276,8 @@
         color: rgba(255, 255, 255, 0.7);
         margin-top: 6px;
       }
-      .f-cta-mail a {
-        color: #7fe3b8;
-        font-weight: 700;
-        text-decoration: none;
-      }
-      .f-cta-mail a:hover {
-        text-decoration: underline;
-      }
+      .f-cta-mail a { color: #7fe3b8; font-weight: 700; text-decoration: none; }
+      .f-cta-mail a:hover { text-decoration: underline; }
       .f-btn {
         display: inline-flex;
         align-items: center;
@@ -377,60 +291,31 @@
         text-decoration: none;
         white-space: nowrap;
         box-shadow: 0 10px 24px rgba(37, 211, 102, 0.45);
-        transition:
-          transform 0.18s ease,
-          box-shadow 0.18s ease;
+        transition: transform 0.18s ease, box-shadow 0.18s ease;
       }
       .f-btn:hover {
         transform: translateY(-2px);
         box-shadow: 0 14px 30px rgba(37, 211, 102, 0.55);
       }
-      .f-btn svg {
-        width: 18px;
-        height: 18px;
-      }
+      .f-btn svg { width: 18px; height: 18px; }
 
-      /* ===== RESPONSIVE ===== */
       @media (max-width: 760px) {
-        .flyer {
-          padding: 34px 24px;
-        }
-        .f-title {
-          font-size: 1.9rem;
-        }
-        .f-planes {
-          grid-template-columns: 1fr;
-        }
-        .f-justif-list {
-          flex-direction: column;
-          gap: 6px;
-        }
-        .f-cta {
-          flex-direction: column;
-          align-items: stretch;
-          text-align: center;
-        }
-        .f-btn {
-          justify-content: center;
-        }
-        .f-badge,
-        .f-mail {
-          font-size: 0.62rem;
-          padding: 6px 12px;
-        }
+        .flyer { padding: 34px 24px; }
+        .f-title { font-size: 1.9rem; }
+        .f-planes { grid-template-columns: 1fr; }
+        .f-justif-list { flex-direction: column; gap: 6px; }
+        .f-cta { flex-direction: column; align-items: stretch; text-align: center; }
+        .f-btn { justify-content: center; }
+        .f-badge, .f-mail { font-size: 0.62rem; padding: 6px 12px; }
       }
     </style>
   </head>
   <body>
     <div class="flyer">
-      <!-- TOP: LOGO + BADGE + CORREO -->
       <div class="f-top">
         <div class="f-logo">
           <div class="f-logo-mark">SR</div>
-          <div>
-            SISMED
-            <span>Reports</span>
-          </div>
+          <div>SISMED <span>Reports</span></div>
         </div>
         <div class="f-top-actions">
           <a
@@ -458,7 +343,6 @@
         </div>
       </div>
 
-      <!-- TÍTULO -->
       <h1 class="f-title">
         Automatización profesional del
         <em>reporte SISMED y SISDIS</em>
@@ -469,7 +353,6 @@
         no comparten código de producto.
       </p>
 
-      <!-- PILLS -->
       <div class="f-pills">
         <span class="f-pill">SISMED (medicamentos)</span>
         <span class="f-pill">SISDIS (dispositivos médicos)</span>
@@ -478,19 +361,16 @@
         <span class="f-pill">Entrega en días hábiles</span>
       </div>
 
-      <!-- PLANES -->
       <div class="f-planes">
         <div class="f-plan">
           <h5>Básico</h5>
-          <div class="v">Hasta 500 líneas / trimestre</div>
-          <div class="p">
-            $2.700.000
-            <small>COP / trimestre</small>
-          </div>
+          <div class="v">Hasta 500 líneas</div>
+          <div class="prov">Hasta 3 proveedores</div>
+          <div class="p">$2.700.000<small>COP / trimestre</small></div>
           <div class="f-total-trim">Pago mensual: $900.000 COP</div>
           <a
             class="f-btn-mini"
-            href="https://wa.me/573134289653?text=Hola%2C%20me%20interesa%20el%20Plan%20B%C3%A1sico%20(hasta%20500%20l%C3%ADneas)"
+            href="https://wa.me/573134289653?text=Hola%2C%20me%20interesa%20el%20Plan%20B%C3%A1sico%20(hasta%20500%20l%C3%ADneas%20y%203%20proveedores)"
             target="_blank"
             rel="noopener">
             <svg viewBox="0 0 24 24" fill="currentColor">
@@ -503,15 +383,13 @@
 
         <div class="f-plan dest">
           <h5>Profesional</h5>
-          <div class="v">500 – 1.000 líneas / trimestre</div>
-          <div class="p">
-            $4.500.000
-            <small>COP / trimestre</small>
-          </div>
+          <div class="v">500 – 1.000 líneas</div>
+          <div class="prov">Hasta 8 proveedores</div>
+          <div class="p">$4.500.000<small>COP / trimestre</small></div>
           <div class="f-total-trim">Pago mensual: $1.500.000 COP</div>
           <a
             class="f-btn-mini"
-            href="https://wa.me/573134289653?text=Hola%2C%20me%20interesa%20el%20Plan%20Profesional%20(500%20a%201.000%20l%C3%ADneas)"
+            href="https://wa.me/573134289653?text=Hola%2C%20me%20interesa%20el%20Plan%20Profesional%20(500%20a%201.000%20l%C3%ADneas%20y%208%20proveedores)"
             target="_blank"
             rel="noopener">
             <svg viewBox="0 0 24 24" fill="currentColor">
@@ -524,15 +402,13 @@
 
         <div class="f-plan">
           <h5>Empresarial</h5>
-          <div class="v">1.000 – 2.000 líneas / trimestre</div>
-          <div class="p">
-            $8.100.000
-            <small>COP / trimestre</small>
-          </div>
+          <div class="v">1.000 – 2.000 líneas</div>
+          <div class="prov">Proveedores ilimitados</div>
+          <div class="p">$8.100.000<small>COP / trimestre</small></div>
           <div class="f-total-trim">Pago mensual: $2.700.000 COP</div>
           <a
             class="f-btn-mini"
-            href="https://wa.me/573134289653?text=Hola%2C%20me%20interesa%20el%20Plan%20Empresarial%20(1.000%20a%202.000%20l%C3%ADneas)"
+            href="https://wa.me/573134289653?text=Hola%2C%20me%20interesa%20el%20Plan%20Empresarial%20(1.000%20a%202.000%20l%C3%ADneas%20y%20proveedores%20ilimitados)"
             target="_blank"
             rel="noopener">
             <svg viewBox="0 0 24 24" fill="currentColor">
@@ -544,7 +420,6 @@
         </div>
       </div>
 
-      <!-- JUSTIFICACIÓN COMPACTA -->
       <div class="f-justif">
         <div class="f-justif-title">¿Por qué este precio?</div>
         <ul class="f-justif-list">
@@ -552,24 +427,15 @@
           <li>Validación con SISPRO e INVIMA</li>
           <li>Precios regulados según norma vigente</li>
           <li>Cruce entre informes</li>
-<<<<<<< HEAD
           <li>Contrato trimestral sin cobro por reporte</li>
-=======
-          <li>Homologación de códigos</li>
-          <li>Precio por volumen de líneas</li>
->>>>>>> 58b87accdee9f80559c5d5a8a3fb16de0d9ad6e4
         </ul>
       </div>
 
-      <!-- CTA FINAL -->
       <div class="f-cta">
         <div class="f-cta-text">
           Contrato trimestral · Mínimo 6 meses
           <small>Ahorre 10% · Precios congelados durante la vigencia · SISMED y SISDIS incluidos</small>
-          <span class="f-cta-mail">
-            Correo:
-            <a href="mailto:sismedreports@gmail.com">sismedreports@gmail.com</a>
-          </span>
+          <span class="f-cta-mail">Correo: <a href="mailto:sismedreports@gmail.com">sismedreports@gmail.com</a></span>
         </div>
         <a class="f-btn" href="https://wa.me/573134289653?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20SISMED%20Reports" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor">
